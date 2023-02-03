@@ -1,0 +1,8 @@
+<section class="main">
+    <ul>
+        <li *ngFor="let alumno of alumnos" [ngClass]="{'alumno-active': alumno.estado}">
+            <span>{{alumno.nombre}}</span><button *ngIf="!alumno.estado" (click)="cambioEstado(alumno.id)">activar</button><button *ngIf="alumno.estado" (click)="cambioEstado(alumno.id)">Desactivar</button>
+        </li>
+        
+    </ul>
+</section>
